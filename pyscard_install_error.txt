@@ -1,0 +1,15 @@
+This is solution work fine for me,
+1. install Chocolatey
+How to isntall Chocolatey
+Link : https://chocolatey.org/docs/installation
+
+2. install swig
+How to install swig
+c:\choco install -y swig
+
+3. install Visual Studio Build Tools
+https://download.visualstudio.microsoft.com/download/pr/ac28b571-7709-4635-83d0-6277d6102ecb/ae0caec52ee10d6efc9b855bec5b934cf8054a638e08372e0de4f6351a25ea5d/vs_BuildTools.exe
+
+
+4. install pyscard
+c:\pip install pyscard

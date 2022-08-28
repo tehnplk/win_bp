@@ -1,0 +1,1 @@
+pyinstaller --add-data "./sound/*;./sound" --add-data "./*.ui;./" --add-data "./*.png;./" --add-data "./*.ini;./" --add-data "./*.txt;./" --add-data "./*.sql;./" win_x.py

@@ -1,0 +1,16 @@
+﻿[Step to fix pi usb]
+
+0)lsusb
+1)ls -l /dev/ttyUSB*
+2)dmesg | grep ttyUSB
+
+3)sudo nano /etc/udev/rules.d/10-usb-serial.rules
+--- copy ---
+
+SUBSYSTEM=="tty", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", SYMLINK+="ttyUSB_BP"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", SYMLINK+="ttyUSB_TP"
+
+--- end copy ---
+
+4)sudo udevadm trigger
+5)ls -l /dev/ttyUSB*

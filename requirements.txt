@@ -1,0 +1,9 @@
+getmac
+pyserial
+mysql-connector
+configparser
+pygame
+requests
+PyMySQL
+pyscard
+PyQT5
