@@ -199,6 +199,8 @@ color:white;</string>
             <property name="font">
              <font>
               <pointsize>20</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
@@ -235,6 +237,8 @@ color:white;</string>
             <property name="font">
              <font>
               <pointsize>20</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
@@ -271,6 +275,8 @@ color:white;</string>
             <property name="font">
              <font>
               <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">
@@ -309,7 +315,9 @@ color:white;</string>
            <widget class="QLabel" name="lbResult">
             <property name="font">
              <font>
-              <pointsize>20</pointsize>
+              <pointsize>22</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">

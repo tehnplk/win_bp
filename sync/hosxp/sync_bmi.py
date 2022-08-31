@@ -2,13 +2,14 @@ import requests
 import time
 from datetime import datetime
 from con_db import con
+import schedule
 
 api_host = 'http://localhost:3000'
 end_point_get_visit = "patient/get_today_visit_by_cid"
 end_point_post_data = "bmi/post_data_bmi"
 
 
-def get_today_visit_number(cid):
+def get_today_visit(cid):
     r = requests.get(f"{api_host}/{end_point_get_visit}/{cid}")
     resp = r.json()
     if resp:
@@ -30,9 +31,9 @@ def post_data(vn, row):
     return r.json()
 
 
-def do():
+def sync():
     print('BMI==========', str(datetime.now())[:-7], '==========')
-    sql = "select * from smart_gate_bmi where vn is null or vn='None' or trim(vn) = ''"
+    sql = "select * from smart_gate_bmi where  (vn is null or vn='None' or trim(vn) = '') and cid != 'None'"
     with con.cursor() as cursor:
         cursor.execute(sql)
         rows = cursor.fetchall()
@@ -42,7 +43,7 @@ def do():
             _id = row['id']
             cid = row['cid']
             hn = row['hn']
-            vn, _date, _time = get_today_visit_number(cid)
+            vn, _date, _time = get_today_visit(cid)
             if vn:
                 resp = post_data(vn, row)
                 print(cid, resp)
@@ -57,7 +58,20 @@ def do():
     print()
 
 
+def clear():
+    sql = f" DELETE from smart_gate_bmi WHERE  TIMESTAMPDIFF(MINUTE, d_update, NOW()) > 300 "
+    with con.cursor() as cursor:
+        cursor.execute(sql)
+    con.commit()
+    print('CLEAR==========', str(datetime.now())[:-7], '==========')
+
+
 if __name__ == '__main__':
-    while 1:
-        do()
-        time.sleep(5)
+    schedule.every(10).seconds.do(sync)
+    schedule.every(10).minutes.do(clear)
+
+    while True:
+        # Checks whether a scheduled task
+        # is pending to run or not
+        schedule.run_pending()
+        time.sleep(1)
