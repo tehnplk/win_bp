@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1197</width>
-    <height>770</height>
+    <width>1246</width>
+    <height>797</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,7 +28,7 @@
 color: rgb(170, 255, 0);
 font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout" stretch="30,70">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="20,70,10">
     <item>
      <widget class="QGroupBox" name="groupBox">
       <property name="styleSheet">
@@ -164,62 +164,16 @@ background-color: rgb(255, 255, 255);</string>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="10,10,70,10">
+            <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,70">
              <item>
               <widget class="QPushButton" name="btnKey">
                <property name="styleSheet">
                 <string notr="true">background-color: rgb(255, 255, 255);
-font: 40pt &quot;MS Shell Dlg 2&quot;;
+font: 28pt &quot;MS Shell Dlg 2&quot;;
 color: rgb(0, 0, 0);</string>
                </property>
                <property name="text">
                 <string>KEY</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>120</width>
-                 <height>80</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="btn_cls">
-               <property name="font">
-                <font>
-                 <family>MS Shell Dlg 2</family>
-                 <pointsize>16</pointsize>
-                 <weight>50</weight>
-                 <italic>false</italic>
-                 <bold>false</bold>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background-color: rgb(255, 255, 255);
-font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="icon">
-                <iconset>
-                 <normaloff>x-mark-512.png</normaloff>x-mark-512.png</iconset>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>120</width>
-                 <height>80</height>
-                </size>
-               </property>
-               <property name="autoDefault">
-                <bool>false</bool>
-               </property>
-               <property name="default">
-                <bool>false</bool>
-               </property>
-               <property name="flat">
-                <bool>false</bool>
                </property>
               </widget>
              </item>
@@ -228,57 +182,17 @@ color: rgb(0, 0, 0);</string>
                <property name="font">
                 <font>
                  <family>MS Shell Dlg 2</family>
-                 <pointsize>32</pointsize>
+                 <pointsize>28</pointsize>
                  <weight>50</weight>
                  <italic>false</italic>
                  <bold>false</bold>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">font: 32pt &quot;MS Shell Dlg 2&quot;;</string>
+                <string notr="true">font: 28pt &quot;MS Shell Dlg 2&quot;;</string>
                </property>
                <property name="text">
                 <string>นายสมชาย มีมาก</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="btn_save">
-               <property name="font">
-                <font>
-                 <family>MS Shell Dlg 2</family>
-                 <pointsize>16</pointsize>
-                 <weight>50</weight>
-                 <italic>false</italic>
-                 <bold>false</bold>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background-color: rgb(255, 255, 255);
-font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="icon">
-                <iconset>
-                 <normaloff>checkmark-512.png</normaloff>checkmark-512.png</iconset>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>120</width>
-                 <height>80</height>
-                </size>
-               </property>
-               <property name="autoDefault">
-                <bool>false</bool>
-               </property>
-               <property name="default">
-                <bool>false</bool>
-               </property>
-               <property name="flat">
-                <bool>false</bool>
                </property>
               </widget>
              </item>
@@ -514,6 +428,113 @@ color: rgb(255, 255, 255);</string>
            </widget>
           </item>
          </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_7">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="15,70,15">
+       <item>
+        <widget class="QPushButton" name="btn_cls">
+         <property name="font">
+          <font>
+           <family>MS Shell Dlg 2</family>
+           <pointsize>32</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+font: 32pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>ล้าง</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>x-mark-512.png</normaloff>x-mark-512.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>50</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lbMsg">
+         <property name="font">
+          <font>
+           <family>MS Shell Dlg 2</family>
+           <pointsize>32</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 32pt &quot;MS Shell Dlg 2&quot;;
+color:white;
+text-align:center;</string>
+         </property>
+         <property name="text">
+          <string>-</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_save">
+         <property name="font">
+          <font>
+           <family>MS Shell Dlg 2</family>
+           <pointsize>32</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+font: 32pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>บันทึก</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>checkmark-512.png</normaloff>checkmark-512.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>50</width>
+           <height>30</height>
+          </size>
+         </property>
         </widget>
        </item>
       </layout>
